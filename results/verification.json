@@ -1,0 +1,237 @@
+{
+  "max_n": 12,
+  "trees": 986,
+  "weighted_instances": 247,
+  "additional_roots": 278,
+  "admissible_cuts": 18556,
+  "failures": 0,
+  "python": "3.12.14",
+  "networkx": "3.7",
+  "seconds": 43.4603,
+  "by_order": [
+    {
+      "n": 2,
+      "trees": 1,
+      "admissible_cuts": 1,
+      "seconds": 0.0007
+    },
+    {
+      "n": 3,
+      "trees": 1,
+      "admissible_cuts": 1,
+      "seconds": 0.0003
+    },
+    {
+      "n": 4,
+      "trees": 2,
+      "admissible_cuts": 3,
+      "seconds": 0.0016
+    },
+    {
+      "n": 5,
+      "trees": 3,
+      "admissible_cuts": 6,
+      "seconds": 0.0019
+    },
+    {
+      "n": 6,
+      "trees": 6,
+      "admissible_cuts": 17,
+      "seconds": 0.0079
+    },
+    {
+      "n": 7,
+      "trees": 11,
+      "admissible_cuts": 45,
+      "seconds": 0.0229
+    },
+    {
+      "n": 8,
+      "trees": 23,
+      "admissible_cuts": 131,
+      "seconds": 0.0991
+    },
+    {
+      "n": 9,
+      "trees": 47,
+      "admissible_cuts": 383,
+      "seconds": 0.2963
+    },
+    {
+      "n": 10,
+      "trees": 106,
+      "admissible_cuts": 1228,
+      "seconds": 2.0459
+    },
+    {
+      "n": 11,
+      "trees": 235,
+      "admissible_cuts": 3865,
+      "seconds": 6.1762
+    },
+    {
+      "n": 12,
+      "trees": 551,
+      "admissible_cuts": 12876,
+      "seconds": 34.806
+    }
+  ],
+  "examples": {
+    "same_invariants": {
+      "first": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ]
+        ],
+        "profile": [
+          0,
+          2,
+          2,
+          null
+        ]
+      },
+      "second": {
+        "n": 7,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            0,
+            6
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "profile": [
+          0,
+          1,
+          2,
+          null
+        ]
+      },
+      "degrees": [
+        1,
+        1,
+        1,
+        2,
+        2,
+        2,
+        3
+      ],
+      "gamma": 4,
+      "matching": 3
+    },
+    "nonnested": {
+      "n": 12,
+      "edges": [
+        [
+          0,
+          1
+        ],
+        [
+          0,
+          6
+        ],
+        [
+          1,
+          2
+        ],
+        [
+          2,
+          3
+        ],
+        [
+          3,
+          4
+        ],
+        [
+          4,
+          5
+        ],
+        [
+          6,
+          7
+        ],
+        [
+          7,
+          8
+        ],
+        [
+          7,
+          10
+        ],
+        [
+          8,
+          9
+        ],
+        [
+          10,
+          11
+        ]
+      ],
+      "gamma": 7,
+      "profile": [
+        0,
+        1,
+        2,
+        3,
+        5,
+        5
+      ],
+      "k": 1,
+      "optimal_k": [
+        [
+          7
+        ],
+        [
+          8
+        ]
+      ],
+      "optimal_next": [
+        [
+          2,
+          4
+        ]
+      ]
+    }
+  }
+}
