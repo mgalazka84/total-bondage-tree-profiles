@@ -24,6 +24,6 @@ if __name__ == '__main__':
             rows.append(row)
     Path('results').mkdir(exist_ok=True)
     with Path('results/benchmarks.csv').open('w', newline='') as f:
-        w = csv.DictWriter(f, fieldnames=rows[0].keys())
+        w = csv.DictWriter(f, fieldnames=rows[0].keys(), lineterminator='\n')
         w.writeheader()
         w.writerows(rows)

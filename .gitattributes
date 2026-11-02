@@ -1,0 +1,7 @@
+# Keep byte-level checksums stable across platforms.
+* text=auto eol=lf
+
+# Generated binary artifacts must not undergo line-ending conversion.
+*.pdf binary
+*.png binary
+*.zip binary

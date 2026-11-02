@@ -34,5 +34,5 @@ if __name__ == '__main__':
         records.append({'r': r, 'n': n, 'gamma': result['gamma'],
                         'profile': expected, 'peak_states': result['peak_states']})
     Path('results').mkdir(exist_ok=True)
-    Path('results/spider_family.json').write_text(json.dumps(records, indent=2)+'\n')
+    Path('results/spider_family.json').write_text(json.dumps(records, indent=2)+'\n', newline='\n')
     print('Verified the closed profile formula for r=1,...,30 (orders 12,...,128).')

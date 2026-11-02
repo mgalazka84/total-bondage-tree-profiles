@@ -107,9 +107,9 @@ def run(max_n, output):
               'python': platform.python_version(), 'networkx': nx.__version__,
               'seconds': round(time.perf_counter()-start, 4), 'by_order': counts,
               'examples': examples}
-    (output/'verification.json').write_text(json.dumps(report, indent=2)+'\n')
+    (output/'verification.json').write_text(json.dumps(report, indent=2)+'\n', newline='\n')
     with (output/'all_profiles.csv').open('w', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=rows[0].keys())
+        writer = csv.DictWriter(f, fieldnames=rows[0].keys(), lineterminator='\n')
         writer.writeheader()
         writer.writerows(rows)
     print(json.dumps(report, indent=2))

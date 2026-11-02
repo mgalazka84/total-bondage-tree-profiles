@@ -81,7 +81,7 @@ def run():
 if __name__ == '__main__':
     result = run()
     destination = Path(__file__).resolve().parent / 'results' / 'revision_checks.json'
-    destination.write_text(json.dumps(result, indent=2)+'\n')
+    destination.write_text(json.dumps(result, indent=2)+'\n', newline='\n')
     print(f"Verified {len(result['spider_lemma'])} spider-lemma cases, "
           f"{result['weighted_terminal_instances']} weighted terminal instances, "
           "and the triangle counterexample; zero failures.")

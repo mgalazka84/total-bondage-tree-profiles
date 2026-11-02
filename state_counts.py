@@ -61,7 +61,7 @@ if __name__ == '__main__':
     args = parser.parse_args()
     report = summarize(args.results)
     destination = args.results / 'state_counts.json'
-    destination.write_text(json.dumps(report, indent=2) + '\n')
+    destination.write_text(json.dumps(report, indent=2) + '\n', newline='\n')
     print(f"Saved {destination.name}: exhaustive peak "
           f"{report['exhaustive_max_peak_states']}, spider peak "
           f"{report['spider_max_peak_states']}.")

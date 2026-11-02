@@ -93,6 +93,18 @@ tree uses the single sequence generated with seed `291026+n`. Counts can depend
 on the root and child order, although the profile does not. The finite data do
 not establish whether the quadratic worst-case state bound is tight.
 
+## File hashes and line endings
+
+`.gitattributes` keeps text files at LF on checkout, including on Windows with
+`core.autocrlf=true`. The CSV and JSON writers also explicitly emit LF, so
+regenerating files does not introduce CRLF. Use a fresh clone to apply this
+policy to every file in an existing checkout that already has CRLF endings.
+
+The `source_sha256` values in `results/state_counts.json` identify the exact
+recorded input files. They are byte-level checksums. Rerunning timed experiments
+changes their timing fields, so newly generated files can have different hashes
+even when all mathematical results agree.
+
 ## Files
 
 | File | Purpose |
