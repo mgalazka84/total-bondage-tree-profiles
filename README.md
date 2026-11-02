@@ -44,6 +44,8 @@ python -m pip install -r requirements.txt
 python verify.py --max-n 12 --output results
 python families.py
 python benchmark.py
+python state_counts.py
+python revision_checks.py
 python make_figures.py
 ```
 
@@ -67,6 +69,29 @@ vertex subsets; it never calls the dynamic program. The primary solver retains
 complete four-entry boundary signatures and the cheapest deletion realization
 of each signature. It uses sparse dictionaries; the deterministic O(n^4)
 arithmetic-operation proof uses the corresponding direct-address encoding.
+Expected constant-time hash lookup gives the same O(n^4) operation bound in
+expectation for the sparse implementation.
+
+## Observed signature-table sizes
+
+`peak_states` is the largest number of signatures in any one intermediate or
+completed table during a run. `state_counts.py` summarizes the recorded counts
+in `results/state_counts.json`, including input-file hashes. The maxima for the
+exhaustive tree sets of orders 2 through 12 are respectively
+`1, 1, 2, 3, 5, 5, 10, 14, 22, 24, 33`.
+
+| Order | Path | Star | Pruefer tree | Spider |
+| --- | --- | --- | --- | --- |
+| 16 | 34 | 1 | 19 | 38 |
+| 32 | 82 | 1 | 88 | 110 |
+| 64 | 178 | 1 | 154 | 254 |
+| 128 | 370 | 1 | 355 | 542 |
+
+These recorded runs use root 0. Exhaustive and benchmark runs use sorted edge
+lists; spider runs process the long arm before the short arms. Each Pruefer
+tree uses the single sequence generated with seed `291026+n`. Counts can depend
+on the root and child order, although the profile does not. The finite data do
+not establish whether the quadratic worst-case state bound is tight.
 
 ## Files
 
@@ -77,6 +102,8 @@ arithmetic-operation proof uses the corresponding direct-address encoding.
 | `verify.py` | Exhaustive and weighted comparisons |
 | `families.py` | Exact-profile checks for the spider family |
 | `benchmark.py` | Reproducible small timing experiments |
+| `state_counts.py` | Summary of recorded signature-table sizes |
+| `revision_checks.py` | Independent checks of clarified lemma and weighted terminal value |
 | `make_figures.py` | Exact network diagrams and profile plots |
 | `results/` | Recorded results |
 

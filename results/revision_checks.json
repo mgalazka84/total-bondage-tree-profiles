@@ -1,0 +1,102 @@
+{
+  "spider_lemma": [
+    {
+      "arm_length": 0,
+      "n": 5,
+      "gamma": 3
+    },
+    {
+      "arm_length": 1,
+      "n": 6,
+      "gamma": 3
+    },
+    {
+      "arm_length": 2,
+      "n": 7,
+      "gamma": 4
+    },
+    {
+      "arm_length": 3,
+      "n": 8,
+      "gamma": 5
+    },
+    {
+      "arm_length": 4,
+      "n": 9,
+      "gamma": 5
+    },
+    {
+      "arm_length": 5,
+      "n": 10,
+      "gamma": 5
+    },
+    {
+      "arm_length": 6,
+      "n": 11,
+      "gamma": 6
+    },
+    {
+      "arm_length": 7,
+      "n": 12,
+      "gamma": 7
+    },
+    {
+      "arm_length": 8,
+      "n": 13,
+      "gamma": 7
+    },
+    {
+      "arm_length": 9,
+      "n": 14,
+      "gamma": 7
+    },
+    {
+      "arm_length": 10,
+      "n": 15,
+      "gamma": 8
+    },
+    {
+      "arm_length": 11,
+      "n": 16,
+      "gamma": 9
+    },
+    {
+      "arm_length": 12,
+      "n": 17,
+      "gamma": 9
+    }
+  ],
+  "weighted_terminal_instances": 47,
+  "weighted_costs": "Fraction(i % 5, (i % 3)+1) for sorted edge index i.",
+  "triangle_hypothesis_counterexample": {
+    "n": 5,
+    "edges": [
+      [
+        0,
+        1
+      ],
+      [
+        1,
+        2
+      ],
+      [
+        2,
+        0
+      ],
+      [
+        2,
+        3
+      ],
+      [
+        3,
+        4
+      ]
+    ],
+    "matching": 2,
+    "gamma": 2,
+    "terminal_threshold": 2,
+    "terminal_cost": 1,
+    "m_minus_n_plus_matching": 2
+  },
+  "failures": 0
+}
